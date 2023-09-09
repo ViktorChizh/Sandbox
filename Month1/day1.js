@@ -32,30 +32,25 @@ var countSheep = function (num) {
 }
 
 //freecodecamp
-
+//1
 // little comment
 /* big
 comment*/
-
+//2
 var myName;
-
+//3
 // Setup
 var a;
-
 // Only change code below this line
-
 a = 7;
-
+//4
 // Setup
 var a;
 a = 7;
 var b;
-
 // Only change code below this line
-
 b = a;
-
 var a = 9;
-
+//5
 var myFirstName = 'Victor'
 var myLastName = 'Chizh'
