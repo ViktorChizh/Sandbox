@@ -24,7 +24,7 @@ function disemvowel(str) {
 function duplicateCount(text) {
     return (text.toLowerCase().split('').sort().join('').match(/([^])\1+/g) || []).length;
   }
-  // ❓ DESCRIPTION:
+  // ❓DESCRIPTION:
   // Consider an array/list of sheep where some sheep may be missing from their place. We need a function that counts the number of sheep present in the array (true means present).
 
   // For example,
@@ -46,6 +46,7 @@ function duplicateCount(text) {
     sheep.map(e => e === true ? count++ : '')
     return count
   }
+  // 🅾️ other solutions
   //   return sheeps.filter(Boolean).length;
   // countSheeps = x => x.filter( s => s ).length;
 
