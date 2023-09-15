@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Survey Form</title>
+  <link rel="stylesheet" href="./day8cert.css" />
+</head>
+
+<body>
+  <h1 id='title'>Survey Form<h1>
+      <p id='description'> short explanation</p>
+      <form id='survey-form'>
+        <label id="name-label" for='name'> enter your name:
+        <input type='text' id='name' placeholder ='enter your name' required />
+        </label>
+        <label id="email-label" for='email'> enter your email:
+          <input type='email' id='email' placeholder ='enter your email' required />
+        </label>
+        <label id="number-label" for='number'> enter number:
+          <input type='number' id='number' min='0' max='10' placeholder ='enter number' />
+        </label>
+        <label for="dropdown">How did you hear about us?
+          <select id="dropdown" name="dropdown">
+            <option value="1">(select one)</option>
+            <option value="2">(select two)</option>
+          </select>
+        </label>
+        <label for="radio1">
+          <input id="radio1" type="radio" name="radio"  value='Personal Account' />
+            Personal Account
+          </label>
+          <label for="radio2">
+            <input id="radio2" type="radio" name="radio" value='Business Account' />
+            Business Account
+          </label>
+          <label for="checkbox1">
+            <input id="checkbox1" type="checkbox" required name="checkbox1" value='I accept' />
+            I accept
+          </label>
+          <label for="checkbox2">
+            <input id="checkbox2" type="checkbox" required name="checkbox2" value='I agree' />
+            I agree
+          </label>
+          <label for="bio">Provide a bio:
+              <textarea id="bio" name="bio" placeholder="I like coding..."></textarea>
+          </label>
+         <input id="submit" type="submit" value="Submit" />
+       </form>
+</body>
+
+</html>

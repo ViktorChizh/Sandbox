@@ -1,0 +1,14 @@
+h1,
+p {
+    margin: 1em auto;
+    text-align: center;
+}
+label {
+    display: block;
+    margin: 0.5rem 0;
+    text-align: left;
+}
+
+input[type="number"] {
+    width: 20%
+}
