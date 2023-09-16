@@ -107,5 +107,4 @@ function findUniq(arr) {
     return arr.sort()[0] !== arr.sort()[1] ? arr.sort()[0] : arr.sort()[arr.sort().length-1]
   }
 // 🅾️ other solutions that I liked
-
 //    return arr.find(n => arr.indexOf(n) === arr.lastIndexOf(n));
