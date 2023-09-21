@@ -89,3 +89,52 @@ function areYouPlayingBanjo(name) {
 function isValidWalk(walk) {
     return walk.length===10 && walk.filter(e => e==="n").length===walk.filter(e => e==='s').length && walk.filter(e => e==='w').length===walk.filter(e => e==='e').length
   }
+
+// ❓DESCRIPTION:
+// You are given an array(list) strarr of strings and an integer k. Your task is to return the first longest string consisting of k consecutive strings taken in the array.
+// Examples:
+// strarr = ["tree", "foling", "trashy", "blue", "abcdef", "uvwxyz"], k = 2
+// Concatenate the consecutive strings of strarr by 2, we get:
+// treefoling   (length 10)  concatenation of strarr[0] and strarr[1]
+// folingtrashy ("      12)  concatenation of strarr[1] and strarr[2]
+// trashyblue   ("      10)  concatenation of strarr[2] and strarr[3]
+// blueabcdef   ("      10)  concatenation of strarr[3] and strarr[4]
+// abcdefuvwxyz ("      12)  concatenation of strarr[4] and strarr[5]
+// Two strings are the longest: "folingtrashy" and "abcdefuvwxyz".
+// The first that came is "folingtrashy" so
+// longest_consec(strarr, 2) should return "folingtrashy".
+// In the same way:
+// longest_consec(["zone", "abigail", "theta", "form", "libe", "zas", "theta", "abigail"], 2) --> "abigailtheta"
+// n being the length of the string array, if n = 0 or k > n or k <= 0 return "" (return Nothing in Elm, "nothing" in Erlang).
+// Note
+// consecutive strings : follow one after another without an interruption
+// ✅ SOLUTION
+function longestConsec(strarr, k) {
+  if (strarr.length===0 || k > strarr.length || k <= 0) return ""
+let ans=[]
+ for (i=0; i<=strarr.length-k; i++){
+   ans.push(strarr.slice(i, i+k).join(""))
+ }
+return ans[ans.map(e=>e.length).indexOf(Math.max(...ans.map(e=>e.length)))]
+}
+// 🅾️ other solutions that I liked
+//  const longestConsec = (a, k) => k > 0 && k <= a.length ? a.reduce((p, c, i) => (c = a.slice(i, i + k).join('')).length > p.length ? c : p, '') : '';
+
+// ❓DESCRIPTION:
+// Write a function which calculates the average of the numbers in a given list.
+// Note: Empty arrays should return 0.
+// ✅ SOLUTION
+function findAverage(array) { return array.length===0 ? 0 : array.reduce((a,b)=>a+b,0)/array.length}
+
+// ❓DESCRIPTION:
+// Given an array of integers as strings and numbers, return the sum of the array values as if all were numbers.
+// Return your answer as a number.
+// ✅ SOLUTION
+function sumMix(x){ return x.map(e=>+e).reduce((a,b)=>a+b,0)}
+// 🅾️ other solutions that I liked
+// const sumMix=x=>x.reduce((a,b)=>+b+a,0)
+// const sumMix = (arr) => arr.reduce((sum, n) => sum + (+n), 0);
+//
+//
+//
+// 5kyu
