@@ -15,15 +15,15 @@
 // - h = 3, bounce = 1, window = 1.5, result is -1
 // (Condition 2) not fulfilled).
 // ✅ SOLUTION
-function bouncingBall(h,  bounce,  window) {
-    if (h<=0 || bounce>=1 || bounce <=0 || window > h) return -1
-    let counter = -1
-    while (h>window){
-      h *= bounce
-      counter+=2
-    }
-    return counter
+function bouncingBall(h, bounce, window) {
+  if (h <= 0 || bounce >= 1 || bounce <= 0 || window > h) return -1
+  let counter = -1
+  while (h > window) {
+    h *= bounce
+    counter += 2
   }
+  return counter
+}
 // 🅾️ other solutions that I liked
 // var rebounds = -1;
 // if (bounce > 0 && bounce < 1) while (h > window) rebounds+=2, h *= bounce;
@@ -34,21 +34,27 @@ function bouncingBall(h,  bounce,  window) {
 // Let's play! You have to return which player won! In case of a draw return Draw!
 // ✅ SOLUTION
 const rps = (p1, p2) => {
-    if (p1==="scissors") {switch (p2) {
-                       case "scissors":return  "Draw!"
-                       case "paper":return  "Player 1 won!"
-                       case "rock":return  "Player 2 won!"
-                        }}
-   else if (p1==="paper") {switch (p2) {
-                       case "paper":return  "Draw!"
-                       case "rock":return  "Player 1 won!"
-                       case "scissors":return  "Player 2 won!"
-                       }}
-   else if (p1==="rock") {switch (p2) {
-                       case "rock":return  "Draw!"
-                       case "scissors": return "Player 1 won!"
-                       case "paper": return "Player 2 won!"
-                        }}
+  if (p1 === "scissors") {
+    switch (p2) {
+      case "scissors": return "Draw!"
+      case "paper": return "Player 1 won!"
+      case "rock": return "Player 2 won!"
+    }
+  }
+  else if (p1 === "paper") {
+    switch (p2) {
+      case "paper": return "Draw!"
+      case "rock": return "Player 1 won!"
+      case "scissors": return "Player 2 won!"
+    }
+  }
+  else if (p1 === "rock") {
+    switch (p2) {
+      case "rock": return "Draw!"
+      case "scissors": return "Player 1 won!"
+      case "paper": return "Player 2 won!"
+    }
+  }
 };
 // 🅾️ other solutions that I liked
 // const rps = (p1, p2) => {
@@ -64,9 +70,9 @@ const rps = (p1, p2) => {
 // You are given the length and width of a 4-sided polygon. The polygon can either be a rectangle or a square.
 // If it is a square, return its area. If it is a rectangle, return its perimeter.
 // ✅ SOLUTION
-const areaOrPerimeter = function(l , w) {
-    return l===w ? l*w : 2*(l+w)
-  };
+const areaOrPerimeter = function (l, w) {
+  return l === w ? l * w : 2 * (l + w)
+};
 
 // ❓DESCRIPTION:
 // Create a function which answers the question "Are you playing banjo?".
@@ -77,8 +83,8 @@ const areaOrPerimeter = function(l , w) {
 // Names given are always valid strings.
 // ✅ SOLUTION
 function areYouPlayingBanjo(name) {
-    return name[0].toLowerCase()==='r' ? name + " plays banjo" : name + " does not play banjo"
-  }
+  return name[0].toLowerCase() === 'r' ? name + " plays banjo" : name + " does not play banjo"
+}
 // 🅾️ other solutions that I liked
 //  const areYouPlayingBanjo = n => n+(n.match(/^r/i) ? " plays banjo" : " does not play banjo");
 
@@ -87,8 +93,8 @@ function areYouPlayingBanjo(name) {
 // Note: you will always receive a valid array containing a random assortment of direction letters ('n', 's', 'e', or 'w' only). It will never give you an empty array (that's not a walk, that's standing still!).
 // ✅ SOLUTION
 function isValidWalk(walk) {
-    return walk.length===10 && walk.filter(e => e==="n").length===walk.filter(e => e==='s').length && walk.filter(e => e==='w').length===walk.filter(e => e==='e').length
-  }
+  return walk.length === 10 && walk.filter(e => e === "n").length === walk.filter(e => e === 's').length && walk.filter(e => e === 'w').length === walk.filter(e => e === 'e').length
+}
 
 // ❓DESCRIPTION:
 // You are given an array(list) strarr of strings and an integer k. Your task is to return the first longest string consisting of k consecutive strings taken in the array.
@@ -110,12 +116,12 @@ function isValidWalk(walk) {
 // consecutive strings : follow one after another without an interruption
 // ✅ SOLUTION
 function longestConsec(strarr, k) {
-  if (strarr.length===0 || k > strarr.length || k <= 0) return ""
-let ans=[]
- for (i=0; i<=strarr.length-k; i++){
-   ans.push(strarr.slice(i, i+k).join(""))
- }
-return ans[ans.map(e=>e.length).indexOf(Math.max(...ans.map(e=>e.length)))]
+  if (strarr.length === 0 || k > strarr.length || k <= 0) return ""
+  let ans = []
+  for (i = 0; i <= strarr.length - k; i++) {
+    ans.push(strarr.slice(i, i + k).join(""))
+  }
+  return ans[ans.map(e => e.length).indexOf(Math.max(...ans.map(e => e.length)))]
 }
 // 🅾️ other solutions that I liked
 //  const longestConsec = (a, k) => k > 0 && k <= a.length ? a.reduce((p, c, i) => (c = a.slice(i, i + k).join('')).length > p.length ? c : p, '') : '';
@@ -124,13 +130,13 @@ return ans[ans.map(e=>e.length).indexOf(Math.max(...ans.map(e=>e.length)))]
 // Write a function which calculates the average of the numbers in a given list.
 // Note: Empty arrays should return 0.
 // ✅ SOLUTION
-function findAverage(array) { return array.length===0 ? 0 : array.reduce((a,b)=>a+b,0)/array.length}
+function findAverage(array) { return array.length === 0 ? 0 : array.reduce((a, b) => a + b, 0) / array.length }
 
 // ❓DESCRIPTION:
 // Given an array of integers as strings and numbers, return the sum of the array values as if all were numbers.
 // Return your answer as a number.
 // ✅ SOLUTION
-function sumMix(x){ return x.map(e=>+e).reduce((a,b)=>a+b,0)}
+function sumMix(x) { return x.map(e => +e).reduce((a, b) => a + b, 0) }
 // 🅾️ other solutions that I liked
 // const sumMix=x=>x.reduce((a,b)=>+b+a,0)
 // const sumMix = (arr) => arr.reduce((sum, n) => sum + (+n), 0);
