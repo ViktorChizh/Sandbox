@@ -35,7 +35,6 @@ function sumDigPow(a, b) {
 // As usual, your function/method should be pure, i.e. it should not mutate the original string.
 // ✅ SOLUTION
 String.prototype.toAlternatingCase = function () {
-    console.log(this.split('').map(e => e.match(/[a-z]/) ? e.toUpperCase() : e.match(/[A-Z]/) ? e.toLowerCase() : e).join(''))
     return this.split('').map(e => e.match(/[a-z]/) ? e.toUpperCase() : e.match(/[A-Z]/) ? e.toLowerCase() : e).join('')
 }
 // 🅾️ other solutions that I liked
@@ -107,7 +106,6 @@ function comp(array1, array2) {
     for (let i = 0; i < array1.length; i++) {
         if (!array2.includes(array1[i] ** 2)) { return false }
         delete array2[array2.indexOf(array1[i] ** 2)]
-        console.log(array2)
     }
     return !array2.filter(e => e !== '').length
 }
