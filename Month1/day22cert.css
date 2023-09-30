@@ -1,0 +1,93 @@
+header img {
+    width: 100%;
+    height: 10vh;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    width: 98%;
+    margin-top: -10px;
+    margin-left: -7px;
+    padding-bottom: 10px;
+}
+
+nav ul li {
+    list-style: none;
+    width: 100%;
+    justify-content: space-around;
+    background: white;
+}
+
+header {
+    display: block;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+    height: 10vh;
+    background: white;
+    width: 51%;
+}
+
+#video {
+    position: relative;
+    width: 50%;
+    top: 12vh;
+    height: 100vh;
+    margin: auto 25px;
+}
+
+#form {
+    position: relative;
+    top: 15vh;
+    margin: auto 25px;
+}
+
+section {
+    position: relative;
+    top: 15vh;
+    margin: auto 25px;
+    width: 50%;
+}
+
+p {
+    font-size: 20pt;
+    text-align: justify;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    text-align: center;
+    font-size: 25pt;
+}
+
+#form {
+    position: relative;
+    top: 15vh;
+    margin: auto 25px;
+    display: flex
+}
+
+label {
+    width: 10%;
+    min-width: 55px;
+    text-align: centre;
+    vertical-align: middle;
+}
+
+#input input {
+    width: 65%;
+    min-width: 55px;
+    text-align: centre;
+    vertical-align: midle;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    * {
+        scroll-behavior: smooth;
+    }
+}
