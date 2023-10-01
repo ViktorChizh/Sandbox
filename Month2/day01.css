@@ -1,0 +1,52 @@
+body {
+    min-width: 290px;
+    width: 80%;
+    margin: 5px auto;
+}
+
+main {
+    position: absolute;
+    left: 370px;
+    width: 50%;
+    text-align: justify;
+    font-size: 20pt;
+}
+
+#navbar {
+    min-width: 180px;
+    padding: 10px 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+code {
+    margin-left: 50px;
+    font-size: 15pt;
+    font-style: italic;
+}
+
+#navbar header {
+    display: block;
+    font-size: 25pt;
+    font-weight: bold;
+    border-bottom: 2px solid black;
+}
+
+header {
+    font-size: 25pt;
+    font-weight: bold;
+}
+
+a {
+    display: block;
+    padding: 10px 30px;
+    border-bottom: 2px solid black;
+    text-decoration: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    * {
+        scroll-behavior: smooth;
+    }
+}
