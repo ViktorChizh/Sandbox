@@ -11,37 +11,37 @@
 // If the string S is an empty value or the integer N is not positive, return the first argument without changes.
 // ✅ SOLUTION
 function encrypt(text, n) {
-    if (text === null || n < 0) { return text }
-    let odd = []
-    let even = []
-    text = text.split('')
-    for (let i = 1; i <= n; i++) {
-        for (let j = 0; j < text.length; j++) {
-            if (j % 2 === 0) { even.push(text[j]) }
-            if (j % 2 !== 0) { odd.push(text[j]) }
-        }
-        text = odd.concat(even)
-        odd = []
-        even = []
+  if (text === null || n < 0) { return text }
+  let odd = []
+  let even = []
+  text = text.split('')
+  for (let i = 1; i <= n; i++) {
+    for (let j = 0; j < text.length; j++) {
+      if (j % 2 === 0) { even.push(text[j]) }
+      if (j % 2 !== 0) { odd.push(text[j]) }
     }
-    return text.join('')
+    text = odd.concat(even)
+    odd = []
+    even = []
+  }
+  return text.join('')
 }
 
 function decrypt(encryptedText, n) {
-    if (encryptedText === null || n < 0) { return encryptedText }
-    let encr = []
-    encryptedText = encryptedText.split('')
-    let len = encryptedText.length
-    for (let i = 1; i <= n; i++) {
-        for (let j = 0; j < len; j++) {
-            if (j % 2 === 0) { encr.push(encryptedText[Math.floor(len / 2) + j / 2]) }
-            if (j % 2 !== 0) { encr.push(encryptedText[Math.floor(j / 2)]) }
-        }
-        console.log(encr.join(''))
-        encryptedText = encr
-        encr = []
+  if (encryptedText === null || n < 0) { return encryptedText }
+  let encr = []
+  encryptedText = encryptedText.split('')
+  let len = encryptedText.length
+  for (let i = 1; i <= n; i++) {
+    for (let j = 0; j < len; j++) {
+      if (j % 2 === 0) { encr.push(encryptedText[Math.floor(len / 2) + j / 2]) }
+      if (j % 2 !== 0) { encr.push(encryptedText[Math.floor(j / 2)]) }
     }
-    return encryptedText.join('')
+    console.log(encr.join(''))
+    encryptedText = encr
+    encr = []
+  }
+  return encryptedText.join('')
 }
 
 // 🅾️ other solutions that I liked
@@ -69,8 +69,8 @@ function decrypt(encryptedText, n) {
 // [17, 17, 3, 17, 17, 17, 17] ==> 3
 // ✅ SOLUTION
 function stray(numbers) {
-    return +numbers.filter(e => numbers.indexOf(e)===numbers.lastIndexOf(e)).join('')
-  }
+  return +numbers.filter(e => numbers.indexOf(e) === numbers.lastIndexOf(e)).join('')
+}
 // 🅾️ other solutions that I liked
 //  const stray = nums => nums.reduce((a, b) => a ^ b)
 
@@ -79,12 +79,12 @@ function stray(numbers) {
 // For example, if the parameters passed are (2, 6), the function should return [2, 4, 6] as 2, 4, and 6 are the multiples of 2 up to 6.
 // ✅ SOLUTION
 function findMultiples(i, l) {
-    let res = []
-      for (let j=i; j<=l; j+=i){
-        res.push(j)
-      }
-    return res
-    }
+  let res = []
+  for (let j = i; j <= l; j += i) {
+    res.push(j)
+  }
+  return res
+}
 
 // 🅾️ other solutions that I liked
 // const findMultiples = (integer, limit) =>  Array(limit/integer | 0).fill().map( (n,i) => integer*(i+1) )
@@ -97,15 +97,15 @@ function findMultiples(i, l) {
 // If you don't find two consecutive F(n) verifying F(n) * F(n+1) = prodyou will return
 // [F(n), F(n+1), false]
 // ✅ SOLUTION
-function productFib(prod){
-    let f=0
-    let n=1
-    for (let i=0; n*f<prod; i++){
-      n = n + f
-      f = n - f
-    }
-      return [f, n, n*f===prod]
-    }
+function productFib(prod) {
+  let f = 0
+  let n = 1
+  for (let i = 0; n * f < prod; i++) {
+    n = n + f
+    f = n - f
+  }
+  return [f, n, n * f === prod]
+}
 // 🅾️ other solutions that I liked
 // function productFib(prod){
 //     let [a, b] = [0, 1];
@@ -120,10 +120,10 @@ function productFib(prod){
 // "ATTGC" --> "TAACG"
 // "GTAT" --> "CATA"
 // ✅ SOLUTION
-function DNAStrand(dna){
-    let base={'A':'T','T':'A','C':'G','G':'C'}
-    return dna.split('').map(e=>base[e]).join('')
-    }
+function DNAStrand(dna) {
+  let base = { 'A': 'T', 'T': 'A', 'C': 'G', 'G': 'C' }
+  return dna.split('').map(e => base[e]).join('')
+}
 // 🅾️ other solutions that I liked
 // const DNAStrand = dna => dna.replace(/./g, m => 'CGAT'['GCTA'.indexOf(m)])
 
@@ -137,14 +137,14 @@ function DNAStrand(dna){
 // findNb(91716553919377) --> -1
 // ✅ SOLUTION
 function findNb(m) {
-    let sum=0
-    let count=0
-    for (let i=1; sum < m; i++){
-      sum+=i**3
-      count=i
-    }
-        return sum===m ? count : -1
-    }
+  let sum = 0
+  let count = 0
+  for (let i = 1; sum < m; i++) {
+    sum += i ** 3
+    count = i
+  }
+  return sum === m ? count : -1
+}
 
 // 🅾️ other solutions that I liked
 // function findNb(m) {
