@@ -4,12 +4,12 @@
 // a = 1, b = 4 --> [1, 2, 3, 4]
 // ✅ SOLUTION
 function between(a, b) {
-    let res=[]
-    for (let i=a; i<=b; i++){
-      res.push(i)
-    }
-    return res
+  let res = []
+  for (let i = a; i <= b; i++) {
+    res.push(i)
   }
+  return res
+}
 // 🅾️ other solutions that I liked
 //  const between = (a, b) => Array.from(new Array(b-a+1), (_, i) => a + i)
 //  const between = (a, b) => [...Array(b - a + 1)].map((_, idx) => idx + a)
@@ -20,8 +20,8 @@ function between(a, b) {
 // Example output: Hello, Mr. Spock
 // ✅ SOLUTION
 function sayHello(name) {
-    return `Hello, ${name}`
-  }
+  return `Hello, ${name}`
+}
 // 🅾️ other solutions that I liked
 //    return 'Hello, ' +  name
 
@@ -38,7 +38,7 @@ function sayHello(name) {
 // printer_error(s) => "8/22"
 // ✅ SOLUTION
 function printerError(s) {
-    return s.replace(/[a-m]/g,'').length +'/'+ s.length
+  return s.replace(/[a-m]/g, '').length + '/' + s.length
 }
 // 🅾️ other solutions that I liked
 //  var printerError = s => (s.match(/[n-z]/g) || []).length + '/' + s.length
@@ -51,8 +51,8 @@ function printerError(s) {
 // Your goal in this kata is to determine which phrase the girls would say at the last petal for a flower of a given number of petals. The number of petals is always greater than 0.
 // ✅ SOLUTION
 function howMuchILoveYou(nbPetals) {
-    return ["I love you", "a little", "a lot", "passionately", "madly", "not at all"][(nbPetals-1)%6]
-    }
+  return ["I love you", "a little", "a lot", "passionately", "madly", "not at all"][(nbPetals - 1) % 6]
+}
 // 🅾️ other solutions that I liked
 //  const howMuchILoveYou=n=>['not at all','I love you','a little','a lot','passionately','madly'][n%6]
 
@@ -63,9 +63,9 @@ function howMuchILoveYou(nbPetals) {
 //  2.  If the character in the string is whitespace then pass over it as if it was an empty seat
 // Example wave("hello") => ["Hello", "hEllo", "heLlo", "helLo", "hellO"]
 // ✅ SOLUTION
-function wave(str){
-    return [...Array(str.length)].map((e,i)=> str.split('').map((a,j)=>i===j ? a.toUpperCase():a).join('')).filter(e=>e!==str)
-  } // фильтр чистит места соответствующие пробелам (где str состоит из нескольких слов) - там str повторяется и не должна "учавствовать" в волне
+function wave(str) {
+  return [...Array(str.length)].map((e, i) => str.split('').map((a, j) => i === j ? a.toUpperCase() : a).join('')).filter(e => e !== str)
+} // фильтр чистит места соответствующие пробелам (где str состоит из нескольких слов) - там str повторяется и не должна "учавствовать" в волне
 // 🅾️ other solutions that I liked
 //  var wave=w=>[...w].map((a,i)=>w.slice(0,i)+a.toUpperCase()+w.slice(i+1)).filter(a=>a!=w)
 
