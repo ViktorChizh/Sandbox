@@ -5,12 +5,12 @@
 // If the whole array is consecutive then return null2.
 // The array will always have at least 2 elements1 and all elements will be numbers. The numbers will also all be unique and in ascending order. The numbers could be positive or negative and the first non-consecutive could be either too!
 // ✅ SOLUTION
-function firstNonConsecutive (arr) {
-    for(let i=0; i<arr.length-1; i++){
-   if (arr[i] !== arr[i+1]-1){return arr[i+1] }
-   }
-     return null
-     }
+function firstNonConsecutive(arr) {
+  for (let i = 0; i < arr.length - 1; i++) {
+    if (arr[i] !== arr[i + 1] - 1) { return arr[i + 1] }
+  }
+  return null
+}
 // 🅾️ other solutions that I liked
 // function firstNonConsecutive (arr) {
 //     let result = arr.find((val, index) => val !== index + arr[0]);
@@ -36,9 +36,9 @@ function firstNonConsecutive (arr) {
 // copaDelReyGoals
 // Create a fourth variable named totalGoals that stores the sum of all of Messi's goals for this year.
 // ✅ SOLUTION
-var laLigaGoals=43
-var championsLeagueGoals=10
-var copaDelReyGoals=5
+var laLigaGoals = 43
+var championsLeagueGoals = 10
+var copaDelReyGoals = 5
 var totalGoals = laLigaGoals + championsLeagueGoals + copaDelReyGoals
 
 // ❓DESCRIPTION:
@@ -49,15 +49,15 @@ var totalGoals = laLigaGoals + championsLeagueGoals + copaDelReyGoals
 // [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]  =>  [1, 8, 3, 6, 5, 4, 7, 2, 9, 0]
 // ✅ SOLUTION
 function sortArray(array) {
-    let odd = array.filter(e => e%2 !== 0).sort((a,b)=>a-b)
-    for (let i=0; i<array.length; i++){
-      if (array[i]%2 !== 0){
-        array[i]=odd[0]
-        odd.splice(0,1)
-      }
+  let odd = array.filter(e => e % 2 !== 0).sort((a, b) => a - b)
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] % 2 !== 0) {
+      array[i] = odd[0]
+      odd.splice(0, 1)
     }
-    return array
   }
+  return array
+}
 // 🅾️ other solutions that I liked
 // function sortArray(array) {
 //     const odd = array.filter((x) => x % 2).sort((a,b) => a - b);
@@ -75,13 +75,13 @@ function sortArray(array) {
 // Please look at the examples and clarifications below, to ensure you understand the task correctly :)
 // ✅ SOLUTION
 function queueTime(customers, n) {
-    let w = new Array(n).fill(0);
-    for (let t of customers) {
-      let idx = w.indexOf(Math.min(...w));
-      w[idx] += t;
-    }
-    return Math.max(...w);
+  let w = new Array(n).fill(0);
+  for (let t of customers) {
+    let idx = w.indexOf(Math.min(...w));
+    w[idx] += t;
   }
+  return Math.max(...w);
+}
 
 // ❓DESCRIPTION:
 // Remove an exclamation mark from the end of a string. For a beginner kata, you can assume that the input data is always a string, no need to verify it.
@@ -93,9 +93,9 @@ function queueTime(customers, n) {
 // "Hi! Hi!" ---> "Hi! Hi"
 // "Hi"      ---> "Hi"
 // ✅ SOLUTION
-function remove (string) {
-    return string[string.length-1]==='!' ? string.slice(0,string.length-1) : string
-  }
+function remove(string) {
+  return string[string.length - 1] === '!' ? string.slice(0, string.length - 1) : string
+}
 // 🅾️ other solutions that I liked
 // return s.replace( /!$/, '')
 // return s.endsWith('!') ? s.slice(0, -1) : s
@@ -110,8 +110,8 @@ function remove (string) {
 // XO("zzoo") => false
 // ✅ SOLUTION
 function XO(str) {
-    return str.toLowerCase().split('').filter(e=>e==='x').length===str.toLowerCase().split('').filter(e=>e==='o').length
-  }
+  return str.toLowerCase().split('').filter(e => e === 'x').length === str.toLowerCase().split('').filter(e => e === 'o').length
+}
 // 🅾️ other solutions that I liked
 // return str.replace(/o/ig, '').length === str.replace(/x/ig, '').length
 
@@ -126,9 +126,9 @@ function XO(str) {
 // For example 2 is not a factor of 7 because: 7 % 2 = 1
 // Note: base is a non-negative number, factor is a positive number.
 // ✅ SOLUTION
-function checkForFactor (base, factor) {
-    return base%factor===0
-  }
+function checkForFactor(base, factor) {
+  return base % factor === 0
+}
 
 
 // 30% to 4kyu
