@@ -4,6 +4,8 @@
 // скоро начало курсов в it-incubator, а еще так много всего надо закончить.
 // но сертификат заслуженный, т.к. реально прошел все темы и делал все практические задания. ВСЁ что мог дать предложенный на сайте контент я получил в ПОЛНОМ объеме. поэтому НЕ считаю свой поступок жульничеством!
 
+// ЕСТЕСТВЕННО вырванный файл из среды React не рабочий
+
 //  Build a Random Quote Machine
 // Note: React 18 has known incompatibilities with the tests for this project (see issue)
 // Objective: Build an app that is functionally similar to this: https://random-quote-machine.freecodecamp.rocks/.
@@ -30,57 +32,57 @@ import './App.css';
 let base = [
   {
     text: 'Limitations live only in our minds. But if we use our imaginations, our possibilities become limitless.',
-  author: 'Jamie Paolinetti'
+    author: 'Jamie Paolinetti'
   },
   {
     text: 'Life is what we make it, always has been, always will be.',
-  author: 'Grandma Moses'
+    author: 'Grandma Moses'
   },
-    {
+  {
     text: 'I am not a product of my circumstances. I am a product of my decisions.',
-  author: 'Stephen Covey'
+    author: 'Stephen Covey'
   },
   {
     text: "Everything you've ever wanted is on the other side of fear.",
-  author: 'George Addair'
+    author: 'George Addair'
   },
-    {
+  {
     text: 'A person who never made a mistake never tried anything new.',
-  author: 'Albert Einstein'
+    author: 'Albert Einstein'
   },
   {
     text: 'We can easily forgive a child who is afraid of the dark; the real tragedy of life is when men are afraid of the light.',
-  author: 'Plato'
+    author: 'Plato'
   },
-    {
+  {
     text: 'Our lives begin to end the day we become silent about things that matter.',
-  author: 'Martin Luther King Jr.'
+    author: 'Martin Luther King Jr.'
   },
   {
     text: 'How wonderful it is that nobody need wait a single moment before starting to improve the world.',
-  author: 'Anne Frank'
+    author: 'Anne Frank'
   },
-    {
+  {
     text: 'When I stand before God at the end of my life, I would hope that I would not have a single bit of talent left and could say, I used everything you gave me.',
-  author: 'Erma Bombeck'
+    author: 'Erma Bombeck'
   },
   {
     text: 'We become what we think about.',
-  author: 'Earl Nightingale'
+    author: 'Earl Nightingale'
   },
 ]
 
 
 function App() {
-  const [ind, setInd] = useState(Math.floor(Math.random()*10))
-   return (
+  const [ind, setInd] = useState(Math.floor(Math.random() * 10))
+  return (
     <div id='quote-box'>
-    <p id='text'>  {base[ind].text} </p>
-    <p id='author'> {base[ind].author} </p>
-    <button id='new-quote' onClick = {() => setInd(Math.floor(Math.random()*10))}> BUTTON </button>
-    <br />
-    <a id="tweet-quote" href="twitter.com/intent/tweet"> ТВИТНИ </a>
-</div>
+      <p id='text'>  {base[ind].text} </p>
+      <p id='author'> {base[ind].author} </p>
+      <button id='new-quote' onClick={() => setInd(Math.floor(Math.random() * 10))}> BUTTON </button>
+      <br />
+      <a id="tweet-quote" href="twitter.com/intent/tweet"> ТВИТНИ </a>
+    </div>
   );
 }
 
