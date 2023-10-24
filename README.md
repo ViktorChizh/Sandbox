@@ -1,2 +1,5 @@
 # Sandbox
-Some tasks that I perform in FREECODECAMP and CODEWARS to obtain training opportunities in It-Incubator, if I need it
+completed training at FREECODECAMP, received 3 certificates
+Some tasks that I performed in CODEWARS 
+After I start studying in it-incubator I will stop copying here. 
+Records will be maintained on the it-incubator platform's
